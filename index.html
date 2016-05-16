@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Practice</title>
+        <script type="text/javascript" src="./stopWatch.js"></script>
+    </head>
+    <body>
+        <h3>ストップウォッチ</h3>
+        <h1 id="display"></h1>
+        <button id='startBtn' onclick='stopWatch.start();'>Start!</button>
+        <button id='stopBtn' onclick='stopWatch.stop();'>Stop!</button>
+        <button id='resetBtn' onclick='stopWatch.reset();'>Reset!</button>
+        <button id='laptimeBtn' onclick='stopWatch.laptime();'>Laptime!</button>
+        <p>Laptime:</p>
+        <ol id="list"></ol>
+    </body>
+    <script type="text/javascript">
+        var stopWatch = new StopWatch();
+        
+        // 初期表示
+        stopWatch.setText(stopWatch.display, stopWatch.counter);
+    </script>
+</html>
