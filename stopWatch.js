@@ -1,6 +1,6 @@
-var StopWatch = function() {
-    this.display = document.getElementById('display');
-    this.lapList = document.getElementById('list');
+var StopWatch = function(display, list) {
+    this.display = display;
+    this.lapList = list;
     this.startUp = false;
     this.counter = 0;
     this.timer;

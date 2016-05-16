@@ -16,7 +16,9 @@
         <ol id="list"></ol>
     </body>
     <script type="text/javascript">
-        var stopWatch = new StopWatch();
+        var display = document.getElementById('display');
+        var list = document.getElementById('list');
+        var stopWatch = new StopWatch(display, list);
         
         // 初期表示
         stopWatch.setText(stopWatch.display, stopWatch.counter);
