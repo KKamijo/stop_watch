@@ -1,9 +1,9 @@
-var StopWatch = function(display, list) {
+var StopWatch = function(display, lapList) {
     this.display = display;
     this.display.setText = function(n) {
         this.innerHTML = n.toFixed(2);
     };
-    this.lapList = list;
+    this.lapList = lapList;
     this.lapList.setText = function(n) {
         this.innerHTML = n.toFixed(2);
     };
