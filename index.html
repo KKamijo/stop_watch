@@ -4,16 +4,26 @@
         <meta charset="utf-8">
         <title>HTML Practice</title>
         <script type="text/javascript" src="./stopWatch.js"></script>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="css/layouts/marketing.css">
     </head>
     <body>
-        <h3>ストップウォッチ</h3>
-        <h1 id="display"></h1>
-        <button id='startBtn' onclick='stopWatch.start();'>Start!</button>
-        <button id='stopBtn' onclick='stopWatch.stop();'>Stop!</button>
-        <button id='resetBtn' onclick='stopWatch.reset();'>Reset!</button>
-        <button id='laptimeBtn' onclick='stopWatch.laptime();'>Laptime!</button>
-        <p>Laptime:</p>
-        <ol id="list"></ol>
+        <div class="splash-container">
+            <div class="splash">
+                <h2 class="splash-subhead">Stop Watch</h2>
+                <h1 class="splash-head" id="display">0.00</h1>
+                <button class="pure-button" id='startBtn' onclick='stopWatch.start();'>Start!</button>
+                <button class="pure-button" id='stopBtn' onclick='stopWatch.stop();'>Stop!</button>
+                <button class="pure-button" id='resetBtn' onclick='stopWatch.reset();'>Reset!</button>
+                <button class="pure-button" id='laptimeBtn' onclick='stopWatch.laptime();'>Laptime!</button>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content">
+                <h3 class="content-head is-center">Laptime</h3>
+                <div class="pure-g is-center" id="list"></div>
+            </div>
+        </div>
     </body>
     <script type="text/javascript">
         var display = document.getElementById('display');

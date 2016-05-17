@@ -13,7 +13,7 @@ var StopWatch = function(display, lapList) {
 };
 
 StopWatch.prototype.start = function() {
-    if(this.startUp) return;
+    if(this.startUp) return;    
     this.startUp = true;
     var self = this;
     this.timer = setInterval(function() {
@@ -36,7 +36,7 @@ StopWatch.prototype.reset = function() {
 
 StopWatch.prototype.laptime = function() {
     if(!this.startUp) return;
-    var child = document.createElement('li');
+    var child = document.createElement('p');
     child.innerHTML = this.counter.toFixed(2);
     this.lapList.appendChild(child);
 };
