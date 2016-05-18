@@ -17,9 +17,9 @@ StopWatch.prototype.start = function() {
     this.startUp = true;
     var self = this;
     this.timer = setInterval(function() {
-        self.counter = self.counter + 0.01;
+        self.counter = self.counter + 0.001;
         self.display.setText(self.counter);
-    },0.01);
+    },0.001);
 };
 
 StopWatch.prototype.stop = function() {
@@ -28,7 +28,7 @@ StopWatch.prototype.stop = function() {
 };
 
 StopWatch.prototype.reset = function() {
-    if (this.startUp)  this.stop();
+    if (this.startUp) this.stop();
     this.counter = 0;
     this.display.setText(this.counter);
     this.lapList.textContent = null;
